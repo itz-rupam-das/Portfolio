@@ -10,7 +10,7 @@ const Footer = () => {
           <a href="https://github.com/itz-rupam-das" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/rupam-das-kolkata" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin />
           </a>
           <a href="mailto:rdas40978@gmail.com" aria-label="Email">
