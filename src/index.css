@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
 
-:root {
+:root, [data-theme='light'] {
   /* Colors - Light Mode */
   --primary: #6366f1;
   --primary-hover: #4f46e5;

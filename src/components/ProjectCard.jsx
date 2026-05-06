@@ -1,5 +1,9 @@
 import { FaGithub, FaExternalLinkAlt, FaFolder } from 'react-icons/fa';
 
+const liveLinks = {
+  'Expense-Tracker': 'https://itz-rupam-das.github.io/Expense-Tracker/#/login'
+};
+
 const ProjectCard = ({ project }) => {
   return (
     <div className="card project-card">
@@ -25,8 +29,8 @@ const ProjectCard = ({ project }) => {
         <a href={project.html_url} target="_blank" rel="noopener noreferrer" className="project-link">
           <FaGithub /> GitHub
         </a>
-        {project.homepage && (
-          <a href={project.homepage} target="_blank" rel="noopener noreferrer" className="project-link">
+        {(project.homepage || liveLinks[project.name]) && (
+          <a href={project.homepage || liveLinks[project.name]} target="_blank" rel="noopener noreferrer" className="project-link">
             <FaExternalLinkAlt /> Live
           </a>
         )}
