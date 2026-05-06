@@ -27,15 +27,16 @@ const Contact = () => {
           </motion.p>
         </div>
 
-        <div className="contact-grid">
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
           <motion.div 
             className="card contact-card"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
+            style={{ maxWidth: '500px', width: '100%' }}
           >
-            <h3 className="project-title" style={{ marginBottom: '1.5rem' }}>Contact Information</h3>
+            <h3 className="project-title" style={{ marginBottom: '1.5rem', textAlign: 'center' }}>Contact Information</h3>
             <div style={{ display: 'grid', gap: '1.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <div className="project-icon" style={{ width: '40px', height: '40px', margin: 0, fontSize: '1rem' }}>
@@ -57,43 +58,17 @@ const Contact = () => {
               </div>
             </div>
 
-            <div style={{ marginTop: '2.5rem' }}>
+            <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
               <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>Connect with me</h4>
-              <div style={{ display: 'flex', gap: '1rem' }}>
+              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
                 <a href="https://github.com/itz-rupam-das" target="_blank" rel="noopener noreferrer" className="project-icon" style={{ width: '40px', height: '40px', margin: 0, fontSize: '1.2rem', background: 'var(--card)', border: '1px solid var(--border)', color: 'var(--foreground)' }}>
                   <FaGithub />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="project-icon" style={{ width: '40px', height: '40px', margin: 0, fontSize: '1.2rem', background: 'var(--card)', border: '1px solid var(--border)', color: 'var(--foreground)' }}>
+                <a href="https://www.linkedin.com/in/rupam-das-kolkata" target="_blank" rel="noopener noreferrer" className="project-icon" style={{ width: '40px', height: '40px', margin: 0, fontSize: '1.2rem', background: 'var(--card)', border: '1px solid var(--border)', color: 'var(--foreground)' }}>
                   <FaLinkedin />
                 </a>
               </div>
             </div>
-          </motion.div>
-
-          <motion.div 
-            className="card contact-card"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-              <div className="form-group">
-                <label htmlFor="name">Full Name</label>
-                <input type="text" id="name" placeholder="John Doe" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email Address</label>
-                <input type="email" id="email" placeholder="john@example.com" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Your Message</label>
-                <textarea id="message" rows="5" placeholder="Hi, I'd like to talk about..." required></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '0.5rem' }}>
-                Send Message
-              </button>
-            </form>
           </motion.div>
         </div>
       </div>
